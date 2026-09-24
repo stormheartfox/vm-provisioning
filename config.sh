@@ -29,7 +29,7 @@ NEO4J_DATA_DIR="/opt/neo4j/data"
 NEO4J_LOGS_DIR="/opt/neo4j/logs"
 
 # AWS SECTION -  for sanity and security AWS version is pinned - update as needed
-AWS_CLI_VERSION="2.19.0"
+AWS_CLI_VERSION="2.27.41"
 
 # These are optional values - look up if you need them if you're not sure
 INSTALL_SESSION_MANAGER_PLUGIN=true
