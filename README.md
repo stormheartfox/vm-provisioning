@@ -89,9 +89,9 @@ go version
 This list isn't exhaustive - if you have added anything to the programming languages list in config then you should test those.
 
 
-[!Tip]
-## Please note
-- Golang is installed from the default AppStream repo. Check `dnf info golang`
-  if you need a specific version, the distro package may lag behind upstream. This is just how Rocky Linux rolls.
-- Re-running `sudo ./install.sh` on an already-provisioned machine is safe there are checkers to make sure you're not re-running stuff and dnf gracefully exits so it won't break anything.
-- VirtualBox-specific steps are automatically skipped on other hypervisors, the script checks for VB via `systemd-detect-virt`.
+>[!Tip]
+>## Please note
+>- Golang is installed from the default AppStream repo. Check `dnf >info golang`
+>  if you need a specific version, the distro package may lag >behind upstream. This is just how Rocky Linux rolls.
+>- Re-running `sudo ./install.sh` on an already-provisioned machine >is safe there are checkers to make sure you're not re-running >stuff and dnf gracefully exits so it won't break anything.
+>- VirtualBox-specific steps are automatically skipped on other >hypervisors, the script checks for VB via `systemd-detect-virt`.
