@@ -89,7 +89,7 @@ aws --version
 
 This list isn't exhaustive - if you have added anything to the programming languages list in config then you should test those.
 
->[!Info]
+>[!Important]
 >## AWS CLI configuration
 >
 >The provisioning script installs the AWS CLI itself but doesn't
