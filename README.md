@@ -90,7 +90,6 @@ This list isn't exhaustive - if you have added anything to the programming langu
 
 
 >[!Tip]
->## Please note
 >- Golang is installed from the default AppStream repo. Check `dnf >info golang`
 >  if you need a specific version, the distro package may lag >behind upstream. This is just how Rocky Linux rolls.
 >- Re-running `sudo ./install.sh` on an already-provisioned machine >is safe there are checkers to make sure you're not re-running >stuff and dnf gracefully exits so it won't break anything.
