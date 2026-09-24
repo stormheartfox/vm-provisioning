@@ -1,6 +1,6 @@
 ## The Beautiful Virtual Machine Environment
 
-This is the setup required for a fresh VM with dev tools and quality of life bits and bobs to deliver client work or develop stuff for CRABE etc.
+This is the setup required for a fresh VM with dev tools and quality of life bits and bobs
 
 This is a completely automated setup for a dev environment, it can be run on any hypervisor - though it
 runs checks for VirtualBox QoL stuff. There are no external dependencies beyond dnf and systemd so it should run perfectly fine.
