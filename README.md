@@ -7,7 +7,7 @@ runs checks for VirtualBox QoL stuff. There are no external dependencies beyond 
 
 ## Before the before - Notes
 This documentation assumes you are provisioning your VM adequately, any issues with crashing etc is outside of the remit of this set of scripts. I have made the assumption you know how to set up a virtal machine with enough cores and RAM etc. You will not see any set up instructions for that here. So make sure you do your due diligence.
-Now witout further ado, here's what you need to do to get it in a ready to work state.
+Now without further ado, here's what you need to do to get it in a ready to work state.
 
 ## Before you start: Rocky Linux installation (Minimal ISO) - recommended so you only get exactly what you need!
 
@@ -37,7 +37,7 @@ These steps happen in the Rocky installer itself (Anaconda), before first boot:
 
 Now that your VM is ready to begin installing, you just need to pull the repo and let 'er rip!
 
-1. `git clone my-repo-name`
+1. `git clone git@github.com:stormheartfox/vm-provisioning.git`
 
 2. cd into the repo - `cd vm-provisioning`
 
