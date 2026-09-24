@@ -84,9 +84,18 @@ code --version
 pwsh --version
 az --version
 go version
+aws --version
 ```
 
 This list isn't exhaustive - if you have added anything to the programming languages list in config then you should test those.
+
+>[!Info]
+>## AWS CLI configuration
+>
+>The provisioning script installs the AWS CLI itself but doesn't
+>configure credentials, since these are SECRETS and shouldn't be
+>baked into a shared script or repo. After provisioning completes and you have verified aws-cli installation run: `aws configure sso`
+>or set up named profiles manually in `~/.aws/config`, depending on how you want to manage your sessions.
 
 
 >[!Tip]

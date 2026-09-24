@@ -12,6 +12,7 @@ SCRIPTS=(
   "03-desktop.sh"
   "04-virtualbox.sh"
   "05-docker-neo4j.sh"
+  "06-aws-cli.sh"
 )
 
 for script in "${SCRIPTS[@]}"; do
