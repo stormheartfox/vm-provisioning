@@ -58,14 +58,13 @@ Now that your VM is ready to begin installing, you just need to pull the repo an
 
 This runs, in order:
 
-1. **Desktop environment** — installs the Workstation group if this is a
-   minimal install, and sets the boot target giving you a GNOME GUI.
+1. **Desktop environment** — installs the Workstation group if this is a minimal install, and sets the boot target giving you a GNOME GUI.
 2. **Repositories** — registers all the repos we might need - EPEL, Docker, Microsoft etc. - importing their GPG keys.
 3. **Packages** — installs the dev toolchain, container runtime, languages (Python, Go etc), and application/CLI tools.
 4. **Desktop config** — disables Wayland in GDM for display support(sometimes you can't resize your window - this fixes that problem).
-5. **VirtualBox detection** — if running under VirtualBox, enables Guest
-   Additions services if present, and warns if they're missing.
+5. **VirtualBox detection** — if running under VirtualBox, enables Guest Additions services if present, and warns if they're missing.
 6. **Docker and Neo4j** — enables Docker, and starts Neo4j as a container - you can turn this off if you're not pulling down cloud infra stuff - but it's a nice to have as a local DB for things if you need it.
+7. **Install AWS CLI tool** — grabs the pinned version of AWS CLI from the config and installs it, including additional packages if you marked them true.
 
 ## Manual step required for VirtualBox only
 
