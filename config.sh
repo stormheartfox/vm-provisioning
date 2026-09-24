@@ -5,10 +5,10 @@ declare -A REPOS=(
   [docker-ce-stable]="https://download.docker.com/linux/centos/\$releasever/\$basearch/stable|https://download.docker.com/linux/centos/gpg"
   [code]="https://packages.microsoft.com/yumrepos/vscode|https://packages.microsoft.com/keys/microsoft.asc"
   [microsoft-edge]="https://packages.microsoft.com/yumrepos/edge-stable|https://packages.microsoft.com/keys/microsoft.asc"
-  [packages-microsoft-com-prod]="https://packages.microsoft.com/rhel/10/prod/|https://packages.microsoft.com/keys/microsoft.asc"
   [trivy]="https://aquasecurity.github.io/trivy-repo/rpm/releases/x86_64/|https://aquasecurity.github.io/trivy-repo/rpm/public.key"
 )
 
+MICROSOFT_PROD_CONFIG_RPM_URL="https://packages.microsoft.com/config/rhel/10/packages-microsoft-prod.rpm"
 EPEL_PACKAGE="epel-release"
 
 DEV_TOOLCHAIN_PACKAGES=(gcc make perl kernel-devel kernel-headers elfutils-libelf-devel)

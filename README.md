@@ -32,6 +32,15 @@ These steps happen in the Rocky installer itself (Anaconda), before first boot:
 3. Install git, since it doesn't exist by default: 
 `sudo dnf install -y git`
 
+## Set up git on your environment
+Before running git commands, you must ensure git is configured
+1. Set your global config\
+`git config --global user.name "<your name>"`\
+`git config --global user.email "<your@email.com>"`
+2. Generate an ssh key\
+`ssh-keygen -t ed25519`
+3. Copy and paste your public key into Github SSH key creation\
+`cat ~/.ssh/id_ed25519.pub`
 
 ## Clone and run the provisioning scripts
 

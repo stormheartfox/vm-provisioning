@@ -30,5 +30,11 @@ EOF
   log "Importing GPG key for ${name}"
   rpm --import "${gpgkey}" || warn "Could not import key for ${name}, it may already be present"
 done
+log "Installing Microsoft prod repo config"
+if rpm -q packages-microsoft-prod &>/dev/null; then
+  log "Microsoft prod repo config already installed"
+else
+  dnf install -y "${MICROSOFT_PROD_CONFIG_RPM_URL}"
+fi
 
 log "Repo setup complete"

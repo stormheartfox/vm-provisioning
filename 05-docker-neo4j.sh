@@ -8,6 +8,21 @@ require_root
 log "Starting up docker --- please hold"
 systemctl enable --now docker
 
+TARGET_USER="${SUDO_USER:-$(logname 2>/dev/null || echo "")}"
+
+if [[ -n "${TARGET_USER}" ]]; then
+  if id -nG "${TARGET_USER}" | grep -qw docker; then
+    log "${TARGET_USER} is already a member of the docker group"
+  else
+    log "Adding ${TARGET_USER} to the docker group"
+    usermod -aG docker "${TARGET_USER}"
+    mark_reboot_required
+    warn "${TARGET_USER} was added to the docker group. Reboot using \e[1msudo reboot\e[0m for docker commands work without sudo. Alternatively \e[1mnewgrp docker\e[0m will allow command execution before reboot occurs"
+  fi
+else
+  warn "Could not determine find user. Add your user to docker group manually: \e[1msudo usermod -aG docker <username>\e[0m"
+fi
+
 log "Creating Neo4j data and log directories - this is a DB to ingest resource data from cloud environments. Queried via cyphershell"
 mkdir -p "${NEO4J_DATA_DIR}" "${NEO4J_LOGS_DIR}"
 
