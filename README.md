@@ -50,6 +50,9 @@ Now that your VM is ready to begin installing, you just need to pull the repo an
 
 2. cd into the repo - `cd vm-provisioning`
 
+3. Give the files executable permissions\
+`find . -name "*.sh" -exec chmod +x {} \;`
+
 3. Run the installs - `sudo ./install.sh`
 
 
